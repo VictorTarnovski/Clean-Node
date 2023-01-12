@@ -10,7 +10,7 @@ describe('SignUp Controller', () => {
                 passwordConfirmation: 'any_password'
             }
         }
-        const httpResponse: any = sut.handle(httpRequest)
+        const httpResponse = sut.handle(httpRequest)
         expect(httpResponse.statusCode).toBe(400)
     })
 })
