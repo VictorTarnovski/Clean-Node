@@ -1,3 +1,7 @@
 export class SignUpController {
-    handle(httpRequest: object) {}
+    handle(httpRequest: object) {
+        return {
+            statusCode: 400
+        }
+    }
 }
