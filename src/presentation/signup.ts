@@ -1,6 +1,6 @@
 import { HttpRequest, HttpResponse } from './protocols/http'
 import { MissingParamError } from './errors/missing-param-error'
-import { BadRequest } from './helpers/http-helper'
+import { OK, BadRequest } from './helpers/http-helper'
 
 export class SignUpController {
     handle(httpRequest: HttpRequest): HttpResponse {
@@ -11,9 +11,6 @@ export class SignUpController {
                 return BadRequest(new MissingParamError(`${fieldValue}`))
             }
         }
-        return {
-            statusCode: 200,
-            body: 'Okay message'
-        }
+        return OK()
     }
 }
