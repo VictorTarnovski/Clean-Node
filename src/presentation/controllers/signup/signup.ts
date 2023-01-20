@@ -32,7 +32,8 @@ export class SignUpController implements Controller {
                 email
             })
             return created(account)
-        } catch (error){
+        } catch (error) {
+            console.error(error)
             return serverError()
         }
     }
